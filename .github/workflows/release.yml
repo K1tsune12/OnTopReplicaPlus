@@ -1,0 +1,59 @@
+name: Build and Release
+
+# Builds the app + installer and publishes a GitHub Release whenever a version
+# tag (e.g. v1.1) is pushed.
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
+
+      - name: Restore NuGet packages
+        run: nuget restore src\OnTopReplicaPlus\packages.config -SolutionDirectory src
+
+      - name: Build app and PostInstaller (Release)
+        run: |
+          msbuild src\OnTopReplicaPlus\OnTopReplicaPlus.csproj /p:Configuration=Release /m
+          msbuild src\PostInstaller\PostInstaller.csproj /p:Configuration=Release /m
+
+      - name: Install NSIS
+        run: choco install nsis -y --no-progress
+
+      - name: Build installer (NSIS)
+        run: '& "C:\Program Files (x86)\NSIS\makensis.exe" Installer\script.nsi'
+
+      - name: Stage release assets
+        shell: pwsh
+        run: |
+          $ver = "${{ github.ref_name }}"
+          $rel = "src\OnTopReplicaPlus\bin\Release"
+          New-Item -ItemType Directory -Force "dist\portable" | Out-Null
+          robocopy $rel "dist\portable" /E /XF *.pdb *.xml *.exe.manifest
+          if ($LASTEXITCODE -lt 8) { $LASTEXITCODE = 0 }
+          Compress-Archive -Path "dist\portable\*" -DestinationPath "dist\OnTopReplicaPlus_${ver}_portable.zip" -Force
+          Compress-Archive -Path "Installer\OnTopReplicaPlus-Setup.exe" -DestinationPath "dist\OnTopReplicaPlus_${ver}_Setup.zip" -Force
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: OnTopReplicaPlus ${{ github.ref_name }}
+          generate_release_notes: true
+          files: |
+            dist/OnTopReplicaPlus_${{ github.ref_name }}_portable.zip
+            dist/OnTopReplicaPlus_${{ github.ref_name }}_Setup.zip
