@@ -723,6 +723,9 @@ OnTopReplica será fechado e atualizado.</value>
   <data name="MenuTrayIconTT" xml:space="preserve">
     <value>Mostra um ícone na área de notificação e oculta a janela da barra de tarefas</value>
   </data>
+  <data name="MenuSavedRegions" xml:space="preserve">
+    <value>Regiões salvas</value>
+  </data>
   <data name="MenuMode" xml:space="preserve">
     <value>Modo</value>
   </data>

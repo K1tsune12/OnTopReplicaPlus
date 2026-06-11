@@ -609,6 +609,9 @@ You can enable click-through later</value>
   <data name="MenuTrayIconTT" xml:space="preserve">
     <value>Show a notification-area icon and hide the window from the taskbar</value>
   </data>
+  <data name="MenuSavedRegions" xml:space="preserve">
+    <value>Saved regions</value>
+  </data>
   <data name="MenuMode" xml:space="preserve">
     <value>Mode</value>
   </data>

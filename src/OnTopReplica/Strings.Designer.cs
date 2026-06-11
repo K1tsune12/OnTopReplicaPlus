@@ -1564,6 +1564,15 @@ namespace OnTopReplica {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to Saved regions.
+        /// </summary>
+        internal static string MenuSavedRegions {
+            get {
+                return ResourceManager.GetString("MenuSavedRegions", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to Mode.
         /// </summary>
         internal static string MenuMode {

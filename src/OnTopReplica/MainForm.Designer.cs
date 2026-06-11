@@ -33,6 +33,7 @@
             this.noneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.switchToWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectRegionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.savedRegionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clickForwardingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clickThroughToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,6 +96,7 @@
             this.menuContextWindows,
             this.switchToWindowToolStripMenuItem,
             this.selectRegionToolStripMenuItem,
+            this.savedRegionsToolStripMenuItem,
             this.advancedToolStripMenuItem,
             this.menuContextOpacity,
             this.resizeToolStripMenuItem,
@@ -153,7 +155,15 @@
             this.selectRegionToolStripMenuItem.Text = global::OnTopReplica.Strings.MenuRegion;
             this.selectRegionToolStripMenuItem.ToolTipText = global::OnTopReplica.Strings.MenuRegionTT;
             this.selectRegionToolStripMenuItem.Click += new System.EventHandler(this.Menu_Region_click);
-            // 
+            //
+            // savedRegionsToolStripMenuItem
+            //
+            this.savedRegionsToolStripMenuItem.Enabled = false;
+            this.savedRegionsToolStripMenuItem.Image = global::OnTopReplica.Properties.Resources.regions;
+            this.savedRegionsToolStripMenuItem.Name = "savedRegionsToolStripMenuItem";
+            this.savedRegionsToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.savedRegionsToolStripMenuItem.Text = global::OnTopReplica.Strings.MenuSavedRegions;
+            //
             // advancedToolStripMenuItem
             // 
             this.advancedToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -617,6 +627,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reduceToIconToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem selectRegionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem savedRegionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resizeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem noneToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem switchToWindowToolStripMenuItem;

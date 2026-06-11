@@ -98,6 +98,9 @@ namespace OnTopReplica {
                     Settings.Default.RestoreLastWindowClass = string.Empty;
                 }
 
+                //Store the last selected region (crop), if any, so it can be re-applied next time.
+                Settings.Default.RestoreLastRegion = _mainForm.SelectedThumbnailRegion;
+
                 Log.Write("Persisting settings");
                 Settings.Default.Save();
             }

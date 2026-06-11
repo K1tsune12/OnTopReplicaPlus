@@ -19,6 +19,7 @@ namespace OnTopReplica {
             bool showing = _thumbnailPanel.IsShowingThumbnail;
 
             selectRegionToolStripMenuItem.Enabled = showing;
+            PopulateSavedRegionsMenu(showing);
             switchToWindowToolStripMenuItem.Enabled = showing;
             resizeToolStripMenuItem.Enabled = showing;
             chromeToolStripMenuItem.Checked = IsChromeVisible;
@@ -89,6 +90,48 @@ namespace OnTopReplica {
 
         private void Menu_Region_click(object sender, EventArgs e) {
             SetSidePanel(new OnTopReplica.SidePanels.RegionPanel());
+        }
+
+        /// <summary>
+        /// Fills the "Saved regions" submenu with the stored regions so they can be
+        /// applied to the current clone directly from the menu.
+        /// </summary>
+        private void PopulateSavedRegionsMenu(bool showing) {
+            savedRegionsToolStripMenuItem.DropDownItems.Clear();
+
+            var saved = Settings.Default.SavedRegions;
+            bool hasRegions = saved != null && saved.Count > 0;
+            savedRegionsToolStripMenuItem.Enabled = showing && hasRegions;
+
+            if (!hasRegions)
+                return;
+
+            //Clear the current crop (clone the whole window).
+            var whole = new ToolStripMenuItem(Strings.MenuWindowsWholeRegion);
+            whole.Click += SavedRegion_clearClick;
+            savedRegionsToolStripMenuItem.DropDownItems.Add(whole);
+            savedRegionsToolStripMenuItem.DropDownItems.Add(new ToolStripSeparator());
+
+            var regions = new StoredRegion[saved.Count];
+            saved.CopyTo(regions);
+            Array.Sort(regions, (a, b) => string.Compare(a.Name, b.Name, StringComparison.CurrentCulture));
+
+            foreach (StoredRegion region in regions) {
+                var item = new ToolStripMenuItem(region.Name);
+                item.Tag = region;
+                item.Click += SavedRegion_applyClick;
+                savedRegionsToolStripMenuItem.DropDownItems.Add(item);
+            }
+        }
+
+        private void SavedRegion_clearClick(object sender, EventArgs e) {
+            SelectedThumbnailRegion = null;
+        }
+
+        private void SavedRegion_applyClick(object sender, EventArgs e) {
+            var region = ((ToolStripMenuItem)sender).Tag as StoredRegion;
+            if (region != null)
+                SelectedThumbnailRegion = region.Region;
         }
 
         private void Menu_Resize_opening(object sender, CancelEventArgs e) {

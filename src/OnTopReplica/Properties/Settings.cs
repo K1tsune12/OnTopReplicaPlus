@@ -156,6 +156,48 @@ namespace OnTopReplica.Properties {
         }
 
         /// <summary>
+        /// The region (crop) that was active on the last cloned window, or null if
+        /// none. Restored together with the last window on the next launch.
+        /// </summary>
+        public ThumbnailRegion RestoreLastRegion {
+            get {
+                if (!_data.RestoreLastRegionSet)
+                    return null;
+
+                return _data.RestoreLastRegionRelative
+                    ? new ThumbnailRegion(new Padding(
+                        _data.RestoreLastRegionX, _data.RestoreLastRegionY,
+                        _data.RestoreLastRegionWidth, _data.RestoreLastRegionHeight))
+                    : new ThumbnailRegion(new Rectangle(
+                        _data.RestoreLastRegionX, _data.RestoreLastRegionY,
+                        _data.RestoreLastRegionWidth, _data.RestoreLastRegionHeight));
+            }
+            set {
+                if (value == null) {
+                    _data.RestoreLastRegionSet = false;
+                    return;
+                }
+
+                _data.RestoreLastRegionSet = true;
+                _data.RestoreLastRegionRelative = value.Relative;
+                if (value.Relative) {
+                    var p = value.BoundsAsPadding;
+                    _data.RestoreLastRegionX = p.Left;
+                    _data.RestoreLastRegionY = p.Top;
+                    _data.RestoreLastRegionWidth = p.Right;
+                    _data.RestoreLastRegionHeight = p.Bottom;
+                }
+                else {
+                    var b = value.Bounds;
+                    _data.RestoreLastRegionX = b.X;
+                    _data.RestoreLastRegionY = b.Y;
+                    _data.RestoreLastRegionWidth = b.Width;
+                    _data.RestoreLastRegionHeight = b.Height;
+                }
+            }
+        }
+
+        /// <summary>
         /// Theme preference: "System" (follow Windows), "Light" or "Dark".
         /// </summary>
         public string Theme {
@@ -349,6 +391,12 @@ namespace OnTopReplica.Properties {
             HotKeyCycleSavedRegion = "[CTRL]+[SHIFT]+R";
             FullscreenMode = "Standard";
             RestoreLastShowChrome = true;
+            RestoreLastRegionSet = false;
+            RestoreLastRegionRelative = false;
+            RestoreLastRegionX = 0;
+            RestoreLastRegionY = 0;
+            RestoreLastRegionWidth = 0;
+            RestoreLastRegionHeight = 0;
             Theme = "System";
             ShowTrayIcon = false;
             SavedRegions = new List<SerializableRegion>();
@@ -375,6 +423,12 @@ namespace OnTopReplica.Properties {
         [DataMember] public string HotKeyCycleSavedRegion;
         [DataMember] public string FullscreenMode;
         [DataMember] public bool RestoreLastShowChrome;
+        [DataMember] public bool RestoreLastRegionSet;
+        [DataMember] public bool RestoreLastRegionRelative;
+        [DataMember] public int RestoreLastRegionX;
+        [DataMember] public int RestoreLastRegionY;
+        [DataMember] public int RestoreLastRegionWidth;
+        [DataMember] public int RestoreLastRegionHeight;
         [DataMember] public string Theme;
         [DataMember] public bool ShowTrayIcon;
         [DataMember] public List<SerializableRegion> SavedRegions;
