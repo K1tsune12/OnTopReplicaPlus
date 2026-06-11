@@ -53,6 +53,14 @@ namespace OnTopReplica {
             Invalidate();
         }
 
+        /// <summary>
+        /// Sets the colour of the "right-click to start" placeholder hint so it can
+        /// follow the active light/dark theme (it sits over the themed window background).
+        /// </summary>
+        public void SetPlaceholderForeColor(Color color) {
+            _labelGlass.ForeColor = color;
+        }
+
         #region Properties and settings
 
         ThumbnailRegion _currentRegion;

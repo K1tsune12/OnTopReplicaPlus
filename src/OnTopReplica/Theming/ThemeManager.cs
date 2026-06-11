@@ -119,9 +119,12 @@ namespace OnTopReplica.Theming {
         /// Recursively themes a single control and its children.
         /// </summary>
         public static void ApplyToControl(Control control, bool dark) {
-            //The thumbnail surface must always stay black: never theme it or its children.
-            if (control is ThumbnailPanel)
+            //The thumbnail surface itself must stay black, but its placeholder hint
+            //sits over the themed window background, so colour it to match the theme.
+            if (control is ThumbnailPanel thumbnailPanel) {
+                thumbnailPanel.SetPlaceholderForeColor(TextColor);
                 return;
+            }
 
             switch (control) {
                 case TextBox tb:
