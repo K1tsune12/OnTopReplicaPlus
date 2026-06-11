@@ -544,7 +544,7 @@ You can enable click-through later</value>
     <value>Displays a list of window you can select as thumbnail source.</value>
   </data>
   <data name="MenuWindowsWholeRegion" xml:space="preserve">
-    <value>- whole -</value>
+    <value>Default</value>
   </data>
   <data name="RegionsCurrentRegion" xml:space="preserve">
     <value>Current region:</value>

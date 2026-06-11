@@ -566,7 +566,7 @@ Você pode ativar 'click-trough' mais tarde</value>
     <value>Exibe uma lista de janela que você pode selecionar como origem da miniatura.</value>    
   </data>
   <data name="MenuWindowsWholeRegion" xml:space="preserve">
-    <value>- todo -</value>
+    <value>Padrão</value>
   </data>
   <data name="RegionsCurrentRegion" xml:space="preserve">
     <value>Região Atual:</value>
