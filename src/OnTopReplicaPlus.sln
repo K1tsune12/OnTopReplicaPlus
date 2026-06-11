@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnTopReplicaPlus", "OnTopReplica\OnTopReplica.csproj", "{E626BD6E-BF38-4EB7-A128-5CA6F40EF557}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnTopReplicaPlus", "OnTopReplicaPlus\OnTopReplicaPlus.csproj", "{E626BD6E-BF38-4EB7-A128-5CA6F40EF557}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{EA7C9C89-0CCF-41E3-A379-D593AAF7A941}"
 EndProject

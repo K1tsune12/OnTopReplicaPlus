@@ -90,7 +90,7 @@
   <PropertyGroup />
   <PropertyGroup />
   <PropertyGroup>
-    <ApplicationManifest>OnTopReplica.exe.manifest</ApplicationManifest>
+    <ApplicationManifest>OnTopReplicaPlus.exe.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -421,7 +421,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.pt.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="OnTopReplica.exe.manifest" />
+    <None Include="OnTopReplicaPlus.exe.manifest" />
     <None Include="packages.config" />
     <Compile Include="SidePanels\RegionPanel.cs">
       <SubType>UserControl</SubType>

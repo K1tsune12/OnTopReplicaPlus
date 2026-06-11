@@ -108,13 +108,13 @@ Section "!OnTopReplicaPlus" OnTopReplicaPlus
 	Delete "$INSTDIR\VistaControls.dll"
 
 	;Main installation
-	File "..\OnTopReplica\bin\Release\OnTopReplicaPlus.exe"
-	File "..\OnTopReplica\bin\Release\OnTopReplicaPlus.exe.config"
-	File "..\OnTopReplica\bin\Release\WindowsFormsAero.dll"
+	File "..\src\OnTopReplicaPlus\bin\Release\OnTopReplicaPlus.exe"
+	File "..\src\OnTopReplicaPlus\bin\Release\OnTopReplicaPlus.exe.config"
+	File "..\src\OnTopReplicaPlus\bin\Release\WindowsFormsAero.dll"
 
 	;Text stuff
-	File "..\OnTopReplica\bin\Release\CREDITS.txt"
-	File "..\OnTopReplica\bin\Release\LICENSE.txt"
+	File "..\src\OnTopReplicaPlus\bin\Release\CREDITS.txt"
+	File "..\src\OnTopReplicaPlus\bin\Release\LICENSE.txt"
 
 	;Post installer
 	File "PostInstaller\PostInstaller\bin\Release\PostInstaller.exe"
@@ -122,17 +122,17 @@ Section "!OnTopReplicaPlus" OnTopReplicaPlus
 
 	;Install localization files
 	SetOutPath "$INSTDIR\it"
-	File "..\OnTopReplica\bin\Release\it\OnTopReplicaPlus.resources.dll"
+	File "..\src\OnTopReplicaPlus\bin\Release\it\OnTopReplicaPlus.resources.dll"
 	SetOutPath "$INSTDIR\cs"
-	File "..\OnTopReplica\bin\Release\cs\OnTopReplicaPlus.resources.dll"
+	File "..\src\OnTopReplicaPlus\bin\Release\cs\OnTopReplicaPlus.resources.dll"
 	SetOutPath "$INSTDIR\da"
-	File "..\OnTopReplica\bin\Release\da\OnTopReplicaPlus.resources.dll"
+	File "..\src\OnTopReplicaPlus\bin\Release\da\OnTopReplicaPlus.resources.dll"
 	SetOutPath "$INSTDIR\de"
-	File "..\OnTopReplica\bin\Release\de\OnTopReplicaPlus.resources.dll"
+	File "..\src\OnTopReplicaPlus\bin\Release\de\OnTopReplicaPlus.resources.dll"
 	SetOutPath "$INSTDIR\es"
-	File "..\OnTopReplica\bin\Release\es\OnTopReplicaPlus.resources.dll"
+	File "..\src\OnTopReplicaPlus\bin\Release\es\OnTopReplicaPlus.resources.dll"
 	SetOutPath "$INSTDIR\pl"
-	File "..\OnTopReplica\bin\Release\pl\OnTopReplicaPlus.resources.dll"
+	File "..\src\OnTopReplicaPlus\bin\Release\pl\OnTopReplicaPlus.resources.dll"
 
 	;Uninstaller
 	WriteUninstaller "$INSTDIR\${UNINSTALLER_NAME}"

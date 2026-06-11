@@ -1,8 +1,10 @@
 **/.vs/*
+.vscode/*
 **/bin/*
 **/obj/*
 **/publish/*
-Installer/OnTopReplica-Setup.exe
+**/UpgradeLog*.htm
+Installer/OnTopReplicaPlus-Setup.exe
 src/Installer/output/*
 *.user
 *.suo

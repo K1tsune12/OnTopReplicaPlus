@@ -58,17 +58,17 @@ Very useful for monitoring background processes, wrangling with complex multi-wi
 
 ## Building
 
-Open `src/OnTopReplica.sln` in **Visual Studio 2019/2022** (Community edition is fine) with the
+Open `src/OnTopReplicaPlus.sln` in **Visual Studio 2019/2022** (Community edition is fine) with the
 *.NET desktop development* workload and the **.NET Framework 4.7 targeting pack** installed, then
 build in `Release`. NuGet will restore the `Windows-Forms-Aero` package automatically.
 
 From the command line:
 
 ```
-msbuild src\OnTopReplica.sln /p:Configuration=Release /p:Platform="Any CPU"
+msbuild src\OnTopReplicaPlus.sln /p:Configuration=Release /p:Platform="Any CPU"
 ```
 
-The resulting executable is `src/OnTopReplica/bin/Release/OnTopReplicaPlus.exe`.
+The resulting executable is `src/OnTopReplicaPlus/bin/Release/OnTopReplicaPlus.exe`.
 
 The optional Windows installer is built from `Installer/script.nsi` using [NSIS](https://nsis.sourceforge.io/).
 
