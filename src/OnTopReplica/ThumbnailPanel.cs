@@ -28,10 +28,12 @@ namespace OnTopReplica {
         private void InitFormComponents() {
             BackColor = Color.Black;
 
-            //Themed Label
+            //Themed Label. The panel background is always black, so use light text
+            //to keep the "right-click to start" hint readable (the old system colour
+            //was black, i.e. invisible, on modern Windows without Aero glass).
             _labelGlass = new WindowsFormsAero.ThemeLabel {
                 Dock = DockStyle.Fill,
-                ForeColor = SystemColors.ControlText,
+                ForeColor = Color.White,
                 Location = Point.Empty,
                 Size = ClientSize,
                 Name = "labelGlass",
