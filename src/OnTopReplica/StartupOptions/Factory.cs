@@ -64,6 +64,7 @@ namespace OnTopReplica.StartupOptions {
                     //Found a window: load it (re-applying the last crop region, if any)!
                     options.WindowId = resultHandle.Handle;
                     options.Region = Settings.Default.RestoreLastRegion;
+                    Log.Write("Restoring last region: {0}", (object)options.Region ?? "(none)");
                 }
                 else {
                     Log.WriteDetails("Failed to find window to restore from last use",
