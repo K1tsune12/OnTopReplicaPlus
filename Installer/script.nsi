@@ -117,8 +117,8 @@ Section "!OnTopReplicaPlus" OnTopReplicaPlus
 	File "..\src\OnTopReplicaPlus\bin\Release\LICENSE.txt"
 
 	;Post installer
-	File "PostInstaller\PostInstaller\bin\Release\PostInstaller.exe"
-	File "PostInstaller\PostInstaller\bin\Release\PostInstaller.exe.config"
+	File "..\src\PostInstaller\bin\Release\PostInstaller.exe"
+	File "..\src\PostInstaller\bin\Release\PostInstaller.exe.config"
 
 	;Install localization files
 	SetOutPath "$INSTDIR\it"
@@ -133,6 +133,8 @@ Section "!OnTopReplicaPlus" OnTopReplicaPlus
 	File "..\src\OnTopReplicaPlus\bin\Release\es\OnTopReplicaPlus.resources.dll"
 	SetOutPath "$INSTDIR\pl"
 	File "..\src\OnTopReplicaPlus\bin\Release\pl\OnTopReplicaPlus.resources.dll"
+	SetOutPath "$INSTDIR\pt-BR"
+	File "..\src\OnTopReplicaPlus\bin\Release\pt-BR\OnTopReplicaPlus.resources.dll"
 
 	;Uninstaller
 	WriteUninstaller "$INSTDIR\${UNINSTALLER_NAME}"
