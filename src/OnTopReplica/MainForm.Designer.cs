@@ -65,6 +65,10 @@
             this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reduceToIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.themeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.themeSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.themeLightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.themeDarkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuContextClose = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,6 +102,7 @@
             this.restoreToolStripMenuItem,
             this.reduceToIconToolStripMenuItem,
             this.toolStripSeparator1,
+            this.themeToolStripMenuItem,
             this.settingsToolStripMenuItem,
             this.aboutToolStripMenuItem,
             this.menuContextClose});
@@ -427,9 +432,40 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(183, 6);
-            // 
+            //
+            // themeToolStripMenuItem
+            //
+            this.themeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.themeSystemToolStripMenuItem,
+            this.themeLightToolStripMenuItem,
+            this.themeDarkToolStripMenuItem});
+            this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
+            this.themeToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.themeToolStripMenuItem.Text = "Theme";
+            //
+            // themeSystemToolStripMenuItem
+            //
+            this.themeSystemToolStripMenuItem.Name = "themeSystemToolStripMenuItem";
+            this.themeSystemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.themeSystemToolStripMenuItem.Text = "System";
+            this.themeSystemToolStripMenuItem.Click += new System.EventHandler(this.Menu_ThemeSystem_click);
+            //
+            // themeLightToolStripMenuItem
+            //
+            this.themeLightToolStripMenuItem.Name = "themeLightToolStripMenuItem";
+            this.themeLightToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.themeLightToolStripMenuItem.Text = "Light";
+            this.themeLightToolStripMenuItem.Click += new System.EventHandler(this.Menu_ThemeLight_click);
+            //
+            // themeDarkToolStripMenuItem
+            //
+            this.themeDarkToolStripMenuItem.Name = "themeDarkToolStripMenuItem";
+            this.themeDarkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.themeDarkToolStripMenuItem.Text = "Dark";
+            this.themeDarkToolStripMenuItem.Click += new System.EventHandler(this.Menu_ThemeDark_click);
+            //
             // settingsToolStripMenuItem
-            // 
+            //
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.settingsToolStripMenuItem.Text = global::OnTopReplica.Strings.MenuSettings;
@@ -607,6 +643,10 @@
         private System.Windows.Forms.ToolStripMenuItem menuModeFullscreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuModeAllScreensToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem themeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem themeSystemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem themeLightToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem themeDarkToolStripMenuItem;
     }
 }
 

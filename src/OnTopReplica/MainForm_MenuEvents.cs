@@ -23,6 +23,9 @@ namespace OnTopReplica {
             resizeToolStripMenuItem.Enabled = showing;
             chromeToolStripMenuItem.Checked = IsChromeVisible;
             restoreToolStripMenuItem.Checked = IsRestoreEnabled;
+            themeSystemToolStripMenuItem.Checked = Theming.ThemeManager.Preference == "System";
+            themeLightToolStripMenuItem.Checked = Theming.ThemeManager.Preference == "Light";
+            themeDarkToolStripMenuItem.Checked = Theming.ThemeManager.Preference == "Dark";
             clickForwardingToolStripMenuItem.Checked = ClickForwardingEnabled;
             chromeToolStripMenuItem.Enabled = showing;
             clickThroughToolStripMenuItem.Enabled = showing;
@@ -162,6 +165,18 @@ namespace OnTopReplica {
 
         private void Menu_Restore_click(object sender, EventArgs e) {
             IsRestoreEnabled = !IsRestoreEnabled;
+        }
+
+        private void Menu_ThemeSystem_click(object sender, EventArgs e) {
+            Theming.ThemeManager.SetPreference("System");
+        }
+
+        private void Menu_ThemeLight_click(object sender, EventArgs e) {
+            Theming.ThemeManager.SetPreference("Light");
+        }
+
+        private void Menu_ThemeDark_click(object sender, EventArgs e) {
+            Theming.ThemeManager.SetPreference("Dark");
         }
 
         private void Menu_Settings_click(object sender, EventArgs e) {

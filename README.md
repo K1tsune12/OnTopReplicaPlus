@@ -33,8 +33,20 @@ Very useful for monitoring background processes, wrangling with complex multi-wi
   cloned window are now restored automatically (the relevant toggles default to *on*), and the
   current opacity is remembered across launches. The very first run still opens with a sensible
   default-sized window.
+* **Light / dark theme.** Follows the Windows theme automatically, or can be forced to Light or
+  Dark from the right-click menu (*Theme*). Themes the title bar, side panels and context menus.
+* **Anti browser-occlusion.** Keeps cloned Chromium/Firefox windows rendering video even when they
+  look occluded — fixes the long-standing "video freezes/goes black when switching windows" problem
+  (reimplemented from [PR #166](https://github.com/LorenzCK/OnTopReplica/pull/166)).
+* **Cycle saved regions** with a global hotkey (default `Ctrl+Shift+R`), and the selected region is
+  kept when switching between grouped windows ([PR #191](https://github.com/LorenzCK/OnTopReplica/pull/191)).
+* **Double-click to restore** the source window instead of toggling fullscreen (optional, off by
+  default — [PR #169](https://github.com/LorenzCK/OnTopReplica/pull/169)).
+* **`/screen=N` command-line option** to launch on a specific monitor ([PR #126](https://github.com/LorenzCK/OnTopReplica/pull/126)).
 * **Click-through fix.** Click-through is no longer silently disabled when the window is brought
   back from the tray or fullscreen (ports [upstream PR #139](https://github.com/LorenzCK/OnTopReplica/pull/139), issue #105).
+* **Updates via GitHub.** *Check for updates* now simply opens this repository's
+  [releases page](https://github.com/K1tsune12/OnTopReplicaPlus/releases) instead of the old (dead) feed.
 
 ## Requirements
 

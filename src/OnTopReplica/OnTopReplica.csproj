@@ -159,8 +159,11 @@
     </Compile>
     <Compile Include="Properties\Settings.cs" />
     <Compile Include="Native\AntiOcclusionMethods.cs" />
+    <Compile Include="Native\DwmThemeMethods.cs" />
     <Compile Include="AntiBrowserOcclusion\AntiOcclusionTracker.cs" />
     <Compile Include="AntiBrowserOcclusion\FakeMultitaskingViewFrame.cs" />
+    <Compile Include="Theming\ThemeManager.cs" />
+    <Compile Include="Theming\DarkColorTable.cs" />
     <Compile Include="Shell.cs" />
     <Compile Include="SidePanelContainer.cs">
       <SubType>Form</SubType>

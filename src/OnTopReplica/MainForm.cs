@@ -77,6 +77,23 @@ namespace OnTopReplica {
 
             //Platform specific form initialization
             Program.Platform.PostHandleFormInit(this);
+
+            //Theming
+            Theming.ThemeManager.ThemeChanged += MainForm_ThemeChanged;
+            ApplyCurrentTheme();
+        }
+
+        private void MainForm_ThemeChanged(object sender, EventArgs e) {
+            ApplyCurrentTheme();
+        }
+
+        /// <summary>
+        /// Applies the current light/dark theme to the form and its context menus.
+        /// </summary>
+        public void ApplyCurrentTheme() {
+            Theming.ThemeManager.ApplyTheme(this);
+            Theming.ThemeManager.ApplyMenuRenderer(
+                menuContext, menuWindows, menuOpacity, menuResize, menuFullscreenContext);
         }
 
         protected override void OnShown(EventArgs e) {
@@ -85,6 +102,9 @@ namespace OnTopReplica {
 
             //Apply startup options
             _startupOptions.Apply(this);
+
+            //Re-apply the theme once shown so the title bar picks up the dark/light setting.
+            ApplyCurrentTheme();
         }
 
         protected override void OnClosing(CancelEventArgs e) {
@@ -97,6 +117,9 @@ namespace OnTopReplica {
 
         protected override void OnClosed(EventArgs e) {
             Log.Write("Main form closed");
+
+            Theming.ThemeManager.ThemeChanged -= MainForm_ThemeChanged;
+
             base.OnClosed(e);
         }
 

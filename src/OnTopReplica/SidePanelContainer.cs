@@ -20,6 +20,17 @@ namespace OnTopReplica {
 
             _parent = mainForm;
             RequestClosingHandler = new EventHandler(Panel_RequestClosing);
+
+            Theming.ThemeManager.ThemeChanged += ThemeManager_ThemeChanged;
+        }
+
+        private void ThemeManager_ThemeChanged(object sender, EventArgs e) {
+            Theming.ThemeManager.ApplyTheme(this);
+        }
+
+        protected override void OnShown(EventArgs e) {
+            base.OnShown(e);
+            Theming.ThemeManager.ApplyTheme(this);
         }
 
         void Panel_RequestClosing(object sender, EventArgs e) {
@@ -29,6 +40,8 @@ namespace OnTopReplica {
 
         protected override void OnClosing(CancelEventArgs e) {
             base.OnClosing(e);
+
+            Theming.ThemeManager.ThemeChanged -= ThemeManager_ThemeChanged;
 
             //Ensure side panel closing code is run
             FreeSidePanel();
@@ -58,6 +71,9 @@ namespace OnTopReplica {
             this.GlassMargins = panel.GlassMargins;
 
             this.ResumeLayout();
+
+            //Theme the newly embedded panel and its controls.
+            Theming.ThemeManager.ApplyTheme(this);
         }
 
         /// <summary>

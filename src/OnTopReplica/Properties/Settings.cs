@@ -155,6 +155,14 @@ namespace OnTopReplica.Properties {
             set { _data.RestoreLastShowChrome = value; }
         }
 
+        /// <summary>
+        /// Theme preference: "System" (follow Windows), "Light" or "Dark".
+        /// </summary>
+        public string Theme {
+            get { return _data.Theme; }
+            set { _data.Theme = value; }
+        }
+
         #endregion
 
         #region Saved regions
@@ -332,6 +340,7 @@ namespace OnTopReplica.Properties {
             HotKeyCycleSavedRegion = "[CTRL]+[SHIFT]+R";
             FullscreenMode = "Standard";
             RestoreLastShowChrome = true;
+            Theme = "System";
             SavedRegions = new List<SerializableRegion>();
         }
 
@@ -356,6 +365,7 @@ namespace OnTopReplica.Properties {
         [DataMember] public string HotKeyCycleSavedRegion;
         [DataMember] public string FullscreenMode;
         [DataMember] public bool RestoreLastShowChrome;
+        [DataMember] public string Theme;
         [DataMember] public List<SerializableRegion> SavedRegions;
 
     }
