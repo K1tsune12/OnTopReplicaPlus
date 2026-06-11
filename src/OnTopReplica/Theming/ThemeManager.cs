@@ -137,6 +137,7 @@ namespace OnTopReplica.Theming {
                     cb.BackColor = InputBackground;
                     cb.ForeColor = InputText;
                     cb.FlatStyle = dark ? FlatStyle.Flat : FlatStyle.Standard;
+                    ApplyComboBoxItemColors(cb, dark);
                     break;
 
                 case Button btn:
@@ -182,6 +183,45 @@ namespace OnTopReplica.Theming {
 
             foreach (Control child in control.Controls)
                 ApplyToControl(child, dark);
+        }
+
+        /// <summary>
+        /// A DropDownList ComboBox under visual styles ignores ForeColor and paints
+        /// its text with the (dark) system colour, which is unreadable on a dark
+        /// background. In dark mode we owner-draw such combos with light text. The
+        /// image-backed language combo draws itself (with flags), so it is left alone.
+        /// </summary>
+        static void ApplyComboBoxItemColors(ComboBox combo, bool dark) {
+            if (combo is OnTopReplica.ImageComboBox)
+                return;
+
+            //Re-subscription is safe: removing an absent handler is a no-op.
+            combo.DrawItem -= DarkComboBoxDrawItem;
+
+            if (dark) {
+                combo.DrawMode = DrawMode.OwnerDrawFixed;
+                combo.DrawItem += DarkComboBoxDrawItem;
+            }
+            else {
+                combo.DrawMode = DrawMode.Normal;
+            }
+            combo.Invalidate();
+        }
+
+        static void DarkComboBoxDrawItem(object sender, DrawItemEventArgs e) {
+            var combo = (ComboBox)sender;
+
+            bool selected = (e.State & DrawItemState.Selected) != 0;
+            var background = selected ? MenuHighlight : InputBackground;
+            using (var brush = new SolidBrush(background)) {
+                e.Graphics.FillRectangle(brush, e.Bounds);
+            }
+
+            if (e.Index >= 0) {
+                string text = combo.GetItemText(combo.Items[e.Index]);
+                TextRenderer.DrawText(e.Graphics, text, combo.Font, e.Bounds, InputText,
+                    TextFormatFlags.Left | TextFormatFlags.VerticalCenter | TextFormatFlags.NoPrefix);
+            }
         }
 
         /// <summary>
