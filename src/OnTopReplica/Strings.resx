@@ -600,6 +600,27 @@ You can enable click-through later</value>
   <data name="SettingsThemeDark" xml:space="preserve">
     <value>Dark</value>
   </data>
+  <data name="MenuTheme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="MenuTrayIcon" xml:space="preserve">
+    <value>Show tray icon</value>
+  </data>
+  <data name="MenuTrayIconTT" xml:space="preserve">
+    <value>Show a notification-area icon and hide the window from the taskbar</value>
+  </data>
+  <data name="MenuMode" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+  <data name="MenuModeStandard" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="MenuModeFullscreen" xml:space="preserve">
+    <value>Fullscreen</value>
+  </data>
+  <data name="MenuModeAllScreens" xml:space="preserve">
+    <value>All screens</value>
+  </data>
   <data name="SettingsHotKeyTitle" xml:space="preserve">
     <value>Hot keys:</value>
   </data>

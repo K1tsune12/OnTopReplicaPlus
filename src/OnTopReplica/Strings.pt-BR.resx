@@ -714,4 +714,25 @@ OnTopReplica será fechado e atualizado.</value>
   <data name="SettingsThemeDark" xml:space="preserve">
     <value>Escuro</value>
   </data>
+  <data name="MenuTheme" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="MenuTrayIcon" xml:space="preserve">
+    <value>Mostrar ícone na bandeja</value>
+  </data>
+  <data name="MenuTrayIconTT" xml:space="preserve">
+    <value>Mostra um ícone na área de notificação e oculta a janela da barra de tarefas</value>
+  </data>
+  <data name="MenuMode" xml:space="preserve">
+    <value>Modo</value>
+  </data>
+  <data name="MenuModeStandard" xml:space="preserve">
+    <value>Padrão</value>
+  </data>
+  <data name="MenuModeFullscreen" xml:space="preserve">
+    <value>Tela cheia</value>
+  </data>
+  <data name="MenuModeAllScreens" xml:space="preserve">
+    <value>Todas as telas</value>
+  </data>
 </root>

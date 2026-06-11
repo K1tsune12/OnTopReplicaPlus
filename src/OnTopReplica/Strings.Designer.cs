@@ -1535,6 +1535,69 @@ namespace OnTopReplica {
                 return ResourceManager.GetString("SettingsThemeDark", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Theme.
+        /// </summary>
+        internal static string MenuTheme {
+            get {
+                return ResourceManager.GetString("MenuTheme", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Show tray icon.
+        /// </summary>
+        internal static string MenuTrayIcon {
+            get {
+                return ResourceManager.GetString("MenuTrayIcon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Show a notification-area icon and hide the window from the taskbar.
+        /// </summary>
+        internal static string MenuTrayIconTT {
+            get {
+                return ResourceManager.GetString("MenuTrayIconTT", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Mode.
+        /// </summary>
+        internal static string MenuMode {
+            get {
+                return ResourceManager.GetString("MenuMode", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Standard.
+        /// </summary>
+        internal static string MenuModeStandard {
+            get {
+                return ResourceManager.GetString("MenuModeStandard", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Fullscreen.
+        /// </summary>
+        internal static string MenuModeFullscreen {
+            get {
+                return ResourceManager.GetString("MenuModeFullscreen", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to All screens.
+        /// </summary>
+        internal static string MenuModeAllScreens {
+            get {
+                return ResourceManager.GetString("MenuModeAllScreens", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Light.

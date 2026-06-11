@@ -434,8 +434,8 @@
             //
             this.trayIconToolStripMenuItem.Name = "trayIconToolStripMenuItem";
             this.trayIconToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.trayIconToolStripMenuItem.Text = "Show tray icon";
-            this.trayIconToolStripMenuItem.ToolTipText = "Show a notification-area icon and hide OnTopReplicaPlus from the taskbar";
+            this.trayIconToolStripMenuItem.Text = global::OnTopReplica.Strings.MenuTrayIcon;
+            this.trayIconToolStripMenuItem.ToolTipText = global::OnTopReplica.Strings.MenuTrayIconTT;
             this.trayIconToolStripMenuItem.Click += new System.EventHandler(this.Menu_TrayIcon_click);
             //
             // toolStripSeparator1
@@ -451,27 +451,27 @@
             this.themeDarkToolStripMenuItem});
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
             this.themeToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.themeToolStripMenuItem.Text = "Theme";
+            this.themeToolStripMenuItem.Text = global::OnTopReplica.Strings.MenuTheme;
             //
             // themeSystemToolStripMenuItem
             //
             this.themeSystemToolStripMenuItem.Name = "themeSystemToolStripMenuItem";
             this.themeSystemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.themeSystemToolStripMenuItem.Text = "System";
+            this.themeSystemToolStripMenuItem.Text = global::OnTopReplica.Strings.SettingsThemeSystem;
             this.themeSystemToolStripMenuItem.Click += new System.EventHandler(this.Menu_ThemeSystem_click);
             //
             // themeLightToolStripMenuItem
             //
             this.themeLightToolStripMenuItem.Name = "themeLightToolStripMenuItem";
             this.themeLightToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.themeLightToolStripMenuItem.Text = "Light";
+            this.themeLightToolStripMenuItem.Text = global::OnTopReplica.Strings.SettingsThemeLight;
             this.themeLightToolStripMenuItem.Click += new System.EventHandler(this.Menu_ThemeLight_click);
             //
             // themeDarkToolStripMenuItem
             //
             this.themeDarkToolStripMenuItem.Name = "themeDarkToolStripMenuItem";
             this.themeDarkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.themeDarkToolStripMenuItem.Text = "Dark";
+            this.themeDarkToolStripMenuItem.Text = global::OnTopReplica.Strings.SettingsThemeDark;
             this.themeDarkToolStripMenuItem.Click += new System.EventHandler(this.Menu_ThemeDark_click);
             //
             // settingsToolStripMenuItem
@@ -535,28 +535,28 @@
             this.menuModeAllScreensToolStripMenuItem});
             this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
             this.modeToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.modeToolStripMenuItem.Text = "Mode";
+            this.modeToolStripMenuItem.Text = global::OnTopReplica.Strings.MenuMode;
             this.modeToolStripMenuItem.DropDownOpening += new System.EventHandler(this.Menu_Fullscreen_Mode_opening);
             // 
             // menuModeStandardToolStripMenuItem
             // 
             this.menuModeStandardToolStripMenuItem.Name = "menuModeStandardToolStripMenuItem";
             this.menuModeStandardToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.menuModeStandardToolStripMenuItem.Text = "Standard";
+            this.menuModeStandardToolStripMenuItem.Text = global::OnTopReplica.Strings.MenuModeStandard;
             this.menuModeStandardToolStripMenuItem.Click += new System.EventHandler(this.Menu_Fullscreen_Mode_Standard_click);
             // 
             // menuModeFullscreenToolStripMenuItem
             // 
             this.menuModeFullscreenToolStripMenuItem.Name = "menuModeFullscreenToolStripMenuItem";
             this.menuModeFullscreenToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.menuModeFullscreenToolStripMenuItem.Text = "Fullscreen";
+            this.menuModeFullscreenToolStripMenuItem.Text = global::OnTopReplica.Strings.MenuModeFullscreen;
             this.menuModeFullscreenToolStripMenuItem.Click += new System.EventHandler(this.Menu_Fullscreen_Mode_Fullscreen_click);
             // 
             // menuModeAllScreensToolStripMenuItem
             // 
             this.menuModeAllScreensToolStripMenuItem.Name = "menuModeAllScreensToolStripMenuItem";
             this.menuModeAllScreensToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.menuModeAllScreensToolStripMenuItem.Text = "All screens";
+            this.menuModeAllScreensToolStripMenuItem.Text = global::OnTopReplica.Strings.MenuModeAllScreens;
             this.menuModeAllScreensToolStripMenuItem.Click += new System.EventHandler(this.Menu_Fullscreen_Mode_AllScreens_click);
             // 
             // enableClickthroughToolStripMenuItem
