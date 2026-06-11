@@ -160,6 +160,10 @@ namespace OnTopReplica.Theming {
                 case GroupBox grp:
                     grp.BackColor = Color.Transparent;
                     grp.ForeColor = TextColor;
+                    //With visual styles on, a GroupBox paints its caption with a fixed
+                    //(dark) theme colour and ignores ForeColor. FlatStyle.Flat makes it
+                    //honour ForeColor so the title is readable in dark mode.
+                    grp.FlatStyle = dark ? FlatStyle.Flat : FlatStyle.System;
                     break;
 
                 case Panel pnl:
@@ -186,9 +190,7 @@ namespace OnTopReplica.Theming {
                 return;
 
             if (IsDark) {
-                var renderer = new ToolStripProfessionalRenderer(new DarkColorTable()) {
-                    RoundedEdges = false
-                };
+                var renderer = new DarkToolStripRenderer();
                 foreach (var menu in menus) {
                     if (menu == null)
                         continue;

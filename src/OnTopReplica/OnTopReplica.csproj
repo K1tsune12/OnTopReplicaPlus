@@ -164,6 +164,7 @@
     <Compile Include="AntiBrowserOcclusion\FakeMultitaskingViewFrame.cs" />
     <Compile Include="Theming\ThemeManager.cs" />
     <Compile Include="Theming\DarkColorTable.cs" />
+    <Compile Include="Theming\DarkToolStripRenderer.cs" />
     <Compile Include="Shell.cs" />
     <Compile Include="SidePanelContainer.cs">
       <SubType>Form</SubType>
