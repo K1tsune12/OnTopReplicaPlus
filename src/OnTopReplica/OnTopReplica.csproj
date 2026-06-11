@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OnTopReplica</RootNamespace>
     <AssemblyName>OnTopReplicaPlus</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>new-flat-icon.ico</ApplicationIcon>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -311,7 +311,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Native\ITaskBarList.cs" />
+    <Compile Include="Native\ITaskBarList.cs" />
     <Compile Include="Native\InputMethods.cs" />
     <Compile Include="Native\MessagingMethods.cs" />
     <Compile Include="Native\MK.cs" />
