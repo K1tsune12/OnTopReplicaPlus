@@ -673,6 +673,45 @@ OnTopReplica será fechado e atualizado.</value>
     <value>Atualização pronta</value>    
   </data>
   <data name="UpdateTitle" xml:space="preserve">
-    <value>Atualizações de OnTopReplica</value>    
+    <value>Atualizações de OnTopReplica</value>
+  </data>
+  <data name="MenuRestore" xml:space="preserve">
+    <value>Duplo-clique para restaurar</value>
+  </data>
+  <data name="MenuRestoreTT" xml:space="preserve">
+    <value>Quando ativado, o duplo-clique na réplica restaura a janela de origem</value>
+  </data>
+  <data name="RegionsTop" xml:space="preserve">
+    <value>Topo</value>
+  </data>
+  <data name="RegionsBottom" xml:space="preserve">
+    <value>Base</value>
+  </data>
+  <data name="RegionsLeft" xml:space="preserve">
+    <value>Esquerda</value>
+  </data>
+  <data name="RegionsRight" xml:space="preserve">
+    <value>Direita</value>
+  </data>
+  <data name="RegionsX" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="RegionsY" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="SettingsHotKeyCycleRegion" xml:space="preserve">
+    <value>Alternar regiões</value>
+  </data>
+  <data name="SettingsThemeTitle" xml:space="preserve">
+    <value>Tema:</value>
+  </data>
+  <data name="SettingsThemeSystem" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="SettingsThemeLight" xml:space="preserve">
+    <value>Claro</value>
+  </data>
+  <data name="SettingsThemeDark" xml:space="preserve">
+    <value>Escuro</value>
   </data>
 </root>

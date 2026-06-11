@@ -10,10 +10,56 @@ using System.Globalization;
 namespace OnTopReplica.SidePanels {
     partial class OptionsPanel : SidePanel {
 
+        GroupBox _groupTheme;
+        ComboBox _comboTheme;
+        bool _themeLoading;
+
         public OptionsPanel() {
             InitializeComponent();
 
             LocalizePanel();
+
+            BuildThemeControls();
+        }
+
+        private void BuildThemeControls() {
+            _groupTheme = new GroupBox {
+                Text = Strings.SettingsThemeTitle,
+                Location = new Point(3, 255),
+                Size = new Size(294, 56),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
+                TabStop = false
+            };
+
+            _comboTheme = new ComboBox {
+                DropDownStyle = ComboBoxStyle.DropDownList,
+                Location = new Point(10, 22),
+                Size = new Size(276, 24),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
+            };
+            _comboTheme.Items.AddRange(new object[] {
+                Strings.SettingsThemeSystem,
+                Strings.SettingsThemeLight,
+                Strings.SettingsThemeDark
+            });
+            _comboTheme.SelectedIndexChanged += ThemeBox_IndexChange;
+
+            _groupTheme.Controls.Add(_comboTheme);
+            panelMain.Controls.Add(_groupTheme);
+        }
+
+        private void ThemeBox_IndexChange(object sender, EventArgs e) {
+            if (_themeLoading)
+                return;
+
+            string preference;
+            switch (_comboTheme.SelectedIndex) {
+                case 1: preference = "Light"; break;
+                case 2: preference = "Dark"; break;
+                default: preference = "System"; break;
+            }
+
+            Theming.ThemeManager.SetPreference(preference);
         }
 
         private void LocalizePanel() {
@@ -39,6 +85,15 @@ namespace OnTopReplica.SidePanels {
             txtHotKeyShowHide.Text = Settings.Default.HotKeyShowHide;
             txtHotKeyClone.Text = Settings.Default.HotKeyCloneCurrent;
             txtHotKeyCycleRegion.Text = Settings.Default.HotKeyCycleSavedRegion;
+
+            //Load the current theme preference into the combo without firing the change handler.
+            _themeLoading = true;
+            switch (Theming.ThemeManager.Preference) {
+                case "Light": _comboTheme.SelectedIndex = 1; break;
+                case "Dark": _comboTheme.SelectedIndex = 2; break;
+                default: _comboTheme.SelectedIndex = 0; break;
+            }
+            _themeLoading = false;
         }
 
         private void Close_click(object sender, EventArgs e) {

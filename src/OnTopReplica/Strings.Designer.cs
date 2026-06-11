@@ -1501,6 +1501,42 @@ namespace OnTopReplica {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to Theme:.
+        /// </summary>
+        internal static string SettingsThemeTitle {
+            get {
+                return ResourceManager.GetString("SettingsThemeTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to System.
+        /// </summary>
+        internal static string SettingsThemeSystem {
+            get {
+                return ResourceManager.GetString("SettingsThemeSystem", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Light.
+        /// </summary>
+        internal static string SettingsThemeLight {
+            get {
+                return ResourceManager.GetString("SettingsThemeLight", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Dark.
+        /// </summary>
+        internal static string SettingsThemeDark {
+            get {
+                return ResourceManager.GetString("SettingsThemeDark", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   查詢類似 Hot keys: 的當地語系化字串。
         /// </summary>
         internal static string SettingsHotKeyTitle {
