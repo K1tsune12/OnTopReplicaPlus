@@ -81,10 +81,57 @@ namespace OnTopReplica {
             //Theming
             Theming.ThemeManager.ThemeChanged += MainForm_ThemeChanged;
             ApplyCurrentTheme();
+
+            //Tray icon (driven by the ShowTrayIcon setting)
+            ApplyTrayIconSetting();
         }
 
         private void MainForm_ThemeChanged(object sender, EventArgs e) {
             ApplyCurrentTheme();
+        }
+
+        NotificationIcon _trayIcon;
+
+        /// <summary>
+        /// Creates or removes the notification-area (tray) icon and shows/hides the
+        /// taskbar button according to the <see cref="Settings.ShowTrayIcon"/> setting.
+        /// </summary>
+        /// <remarks>
+        /// The taskbar button is toggled through <see cref="Native.ITaskbarList"/> rather
+        /// than the <c>ShowInTaskbar</c> property on purpose: changing <c>ShowInTaskbar</c>
+        /// recreates the window handle, which would drop the global hotkey registrations.
+        /// </remarks>
+        public void ApplyTrayIconSetting() {
+            bool show = Settings.Default.ShowTrayIcon;
+
+            if (show) {
+                if (_trayIcon == null)
+                    _trayIcon = new NotificationIcon(this);
+            }
+            else if (_trayIcon != null) {
+                _trayIcon.Dispose();
+                _trayIcon = null;
+            }
+
+            UpdateTaskbarButton(hideFromTaskbar: show);
+        }
+
+        private void UpdateTaskbarButton(bool hideFromTaskbar) {
+            if (!IsHandleCreated)
+                return;
+
+            try {
+                var taskbarList = (Native.ITaskbarList)new Native.CoTaskbarList();
+                taskbarList.HrInit();
+                if (hideFromTaskbar)
+                    taskbarList.DeleteTab(this.Handle);
+                else
+                    taskbarList.AddTab(this.Handle);
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(taskbarList);
+            }
+            catch (Exception ex) {
+                Log.WriteException("Unable to update the taskbar button", ex);
+            }
         }
 
         /// <summary>
@@ -105,6 +152,9 @@ namespace OnTopReplica {
 
             //Re-apply the theme once shown so the title bar picks up the dark/light setting.
             ApplyCurrentTheme();
+
+            //Re-apply the tray/taskbar state now that the taskbar button actually exists.
+            ApplyTrayIconSetting();
         }
 
         protected override void OnClosing(CancelEventArgs e) {
@@ -119,6 +169,11 @@ namespace OnTopReplica {
             Log.Write("Main form closed");
 
             Theming.ThemeManager.ThemeChanged -= MainForm_ThemeChanged;
+
+            if (_trayIcon != null) {
+                _trayIcon.Dispose();
+                _trayIcon = null;
+            }
 
             base.OnClosed(e);
         }

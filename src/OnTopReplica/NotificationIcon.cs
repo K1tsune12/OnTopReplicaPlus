@@ -37,7 +37,7 @@ namespace OnTopReplica {
                     ToolTipText = Strings.MenuCloseTT
                 }
             });
-            Asztal.Szótár.NativeToolStripRenderer.SetToolStripRenderer(_contextMenu);
+            Theming.ThemeManager.ApplyMenuRenderer(_contextMenu);
 
             _taskIcon = new NotifyIcon {
                 Text = Strings.ApplicationName,

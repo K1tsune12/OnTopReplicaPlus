@@ -64,6 +64,7 @@
             this.chromeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reduceToIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.themeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.themeSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,6 +102,7 @@
             this.chromeToolStripMenuItem,
             this.restoreToolStripMenuItem,
             this.reduceToIconToolStripMenuItem,
+            this.trayIconToolStripMenuItem,
             this.toolStripSeparator1,
             this.themeToolStripMenuItem,
             this.settingsToolStripMenuItem,
@@ -427,7 +429,15 @@
             this.reduceToIconToolStripMenuItem.Text = global::OnTopReplica.Strings.MenuReduce;
             this.reduceToIconToolStripMenuItem.ToolTipText = global::OnTopReplica.Strings.MenuReduceTT;
             this.reduceToIconToolStripMenuItem.Click += new System.EventHandler(this.Menu_Reduce_click);
-            // 
+            //
+            // trayIconToolStripMenuItem
+            //
+            this.trayIconToolStripMenuItem.Name = "trayIconToolStripMenuItem";
+            this.trayIconToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.trayIconToolStripMenuItem.Text = "Show tray icon";
+            this.trayIconToolStripMenuItem.ToolTipText = "Show a notification-area icon and hide OnTopReplicaPlus from the taskbar";
+            this.trayIconToolStripMenuItem.Click += new System.EventHandler(this.Menu_TrayIcon_click);
+            //
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -643,6 +653,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuModeFullscreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuModeAllScreensToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trayIconToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem themeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem themeSystemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem themeLightToolStripMenuItem;

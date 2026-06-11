@@ -163,6 +163,15 @@ namespace OnTopReplica.Properties {
             set { _data.Theme = value; }
         }
 
+        /// <summary>
+        /// When true, OnTopReplicaPlus shows a notification-area (tray) icon and
+        /// hides itself from the taskbar.
+        /// </summary>
+        public bool ShowTrayIcon {
+            get { return _data.ShowTrayIcon; }
+            set { _data.ShowTrayIcon = value; }
+        }
+
         #endregion
 
         #region Saved regions
@@ -341,6 +350,7 @@ namespace OnTopReplica.Properties {
             FullscreenMode = "Standard";
             RestoreLastShowChrome = true;
             Theme = "System";
+            ShowTrayIcon = false;
             SavedRegions = new List<SerializableRegion>();
         }
 
@@ -366,6 +376,7 @@ namespace OnTopReplica.Properties {
         [DataMember] public string FullscreenMode;
         [DataMember] public bool RestoreLastShowChrome;
         [DataMember] public string Theme;
+        [DataMember] public bool ShowTrayIcon;
         [DataMember] public List<SerializableRegion> SavedRegions;
 
     }

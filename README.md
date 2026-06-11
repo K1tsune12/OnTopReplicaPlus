@@ -35,6 +35,8 @@ Very useful for monitoring background processes, wrangling with complex multi-wi
   default-sized window.
 * **Light / dark theme.** Follows the Windows theme automatically, or can be forced to Light or
   Dark from the right-click menu (*Theme*). Themes the title bar, side panels and context menus.
+* **Tray icon.** Optional notification-area icon that also hides the window from the taskbar
+  (right-click menu → *Show tray icon*; off by default). Double-click the tray icon to show the window.
 * **Anti browser-occlusion.** Keeps cloned Chromium/Firefox windows rendering video even when they
   look occluded — fixes the long-standing "video freezes/goes black when switching windows" problem
   (reimplemented from [PR #166](https://github.com/LorenzCK/OnTopReplica/pull/166)).

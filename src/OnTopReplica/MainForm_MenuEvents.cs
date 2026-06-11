@@ -23,6 +23,7 @@ namespace OnTopReplica {
             resizeToolStripMenuItem.Enabled = showing;
             chromeToolStripMenuItem.Checked = IsChromeVisible;
             restoreToolStripMenuItem.Checked = IsRestoreEnabled;
+            trayIconToolStripMenuItem.Checked = Settings.Default.ShowTrayIcon;
             themeSystemToolStripMenuItem.Checked = Theming.ThemeManager.Preference == "System";
             themeLightToolStripMenuItem.Checked = Theming.ThemeManager.Preference == "Light";
             themeDarkToolStripMenuItem.Checked = Theming.ThemeManager.Preference == "Dark";
@@ -165,6 +166,11 @@ namespace OnTopReplica {
 
         private void Menu_Restore_click(object sender, EventArgs e) {
             IsRestoreEnabled = !IsRestoreEnabled;
+        }
+
+        private void Menu_TrayIcon_click(object sender, EventArgs e) {
+            Settings.Default.ShowTrayIcon = !Settings.Default.ShowTrayIcon;
+            ApplyTrayIconSetting();
         }
 
         private void Menu_ThemeSystem_click(object sender, EventArgs e) {
