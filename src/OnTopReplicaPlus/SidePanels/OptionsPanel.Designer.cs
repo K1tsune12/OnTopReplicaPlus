@@ -103,7 +103,7 @@
             //
             // lblHotKeyCycleRegion
             //
-            this.lblHotKeyCycleRegion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHotKeyCycleRegion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.lblHotKeyCycleRegion.BackColor = System.Drawing.Color.Transparent;
             this.lblHotKeyCycleRegion.Location = new System.Drawing.Point(192, 92);
             this.lblHotKeyCycleRegion.Name = "lblHotKeyCycleRegion";
@@ -123,7 +123,7 @@
             //
             // lblHotKeyClickThrough
             //
-            this.lblHotKeyClickThrough.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHotKeyClickThrough.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.lblHotKeyClickThrough.BackColor = System.Drawing.Color.Transparent;
             this.lblHotKeyClickThrough.Location = new System.Drawing.Point(192, 126);
             this.lblHotKeyClickThrough.Name = "lblHotKeyClickThrough";
@@ -143,7 +143,7 @@
             //
             // lblHotKeyClickForwarding
             //
-            this.lblHotKeyClickForwarding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHotKeyClickForwarding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.lblHotKeyClickForwarding.BackColor = System.Drawing.Color.Transparent;
             this.lblHotKeyClickForwarding.Location = new System.Drawing.Point(192, 160);
             this.lblHotKeyClickForwarding.Name = "lblHotKeyClickForwarding";
@@ -163,7 +163,7 @@
             //
             // lblHotKeyShowHide
             //
-            this.lblHotKeyShowHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHotKeyShowHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.lblHotKeyShowHide.BackColor = System.Drawing.Color.Transparent;
             this.lblHotKeyShowHide.Location = new System.Drawing.Point(192, 24);
             this.lblHotKeyShowHide.Name = "lblHotKeyShowHide";
@@ -183,7 +183,7 @@
             // 
             // lblHotKeyClone
             // 
-            this.lblHotKeyClone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHotKeyClone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.lblHotKeyClone.BackColor = System.Drawing.Color.Transparent;
             this.lblHotKeyClone.Location = new System.Drawing.Point(192, 58);
             this.lblHotKeyClone.Name = "lblHotKeyClone";
