@@ -90,6 +90,14 @@ namespace OnTopReplica.SidePanels {
             txtHotKeyClickThrough.Text = Settings.Default.HotKeyClickThrough;
             txtHotKeyClickForwarding.Text = Settings.Default.HotKeyClickForwarding;
 
+            //Bring the rows to front from top to bottom, so the lower label always
+            //paints over the (tiny) overlap with the row above and its text stays visible.
+            lblHotKeyShowHide.BringToFront();
+            lblHotKeyClone.BringToFront();
+            lblHotKeyCycleRegion.BringToFront();
+            lblHotKeyClickThrough.BringToFront();
+            lblHotKeyClickForwarding.BringToFront();
+
             //Load the current theme preference into the combo without firing the change handler.
             _themeLoading = true;
             switch (Theming.ThemeManager.Preference) {
