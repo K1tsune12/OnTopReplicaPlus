@@ -15,6 +15,7 @@ namespace OnTopReplica.SidePanels {
         Label _lblDescription;
         bool _themeLoading;
         bool _positioning;
+        float _lastScale = -1f;
 
         public OptionsPanel() {
             InitializeComponent();
@@ -73,10 +74,18 @@ namespace OnTopReplica.SidePanels {
             if (_positioning || _lblDescription == null || _groupTheme == null)
                 return;
 
+            //359 is the hotkeys group's design width; its runtime width gives the scale.
+            float scale = groupHotkeys.Width / 359f;
+
+            //Only reposition when the scale actually changes. This avoids redundant work and,
+            //crucially, clears the ghost pixels left where the controls sat at the previous
+            //(intermediate) scale during auto-scaling.
+            if (scale == _lastScale)
+                return;
+            _lastScale = scale;
+
             _positioning = true;
             try {
-                //359 is the hotkeys group's design width; its runtime width gives the scale.
-                float scale = groupHotkeys.Width / 359f;
                 int gap = Scale(8, scale);
 
                 _lblDescription.SetBounds(
@@ -96,6 +105,9 @@ namespace OnTopReplica.SidePanels {
                     Scale(22, scale),
                     _groupTheme.Width - Scale(20, scale),
                     Scale(24, scale));
+
+                //Repaint the whole panel so no ghost of the previous positions remains.
+                panelMain.Invalidate(true);
             }
             finally {
                 _positioning = false;

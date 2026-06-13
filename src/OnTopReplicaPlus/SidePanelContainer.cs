@@ -26,6 +26,9 @@ namespace OnTopReplica {
 
         private void ThemeManager_ThemeChanged(object sender, EventArgs e) {
             Theming.ThemeManager.ApplyTheme(this);
+
+            //Force an immediate, complete repaint so no pixels of the previous theme survive.
+            this.Refresh();
         }
 
         protected override void OnShown(EventArgs e) {

@@ -150,21 +150,23 @@ namespace OnTopReplica.Theming {
                     break;
 
                 case LinkLabel link:
-                    link.BackColor = dark ? SurfaceBackground : Color.Transparent;
+                    link.BackColor = SurfaceBackground;
                     link.ForeColor = TextColor;
                     link.LinkColor = AccentColor;
                     link.ActiveLinkColor = AccentColor;
                     break;
 
                 case Label lbl:
-                    //Solid background in dark mode: transparent labels inside a flat-styled
-                    //GroupBox can fail to paint their text reliably on Windows.
-                    lbl.BackColor = dark ? SurfaceBackground : Color.Transparent;
+                    //Always use a solid background (matching the surface) rather than a
+                    //transparent one. Transparent labels inside a flat-styled GroupBox can
+                    //fail to paint their text in dark mode, and they keep stale pixels of the
+                    //previous theme when switching, showing dark patches over a light surface.
+                    lbl.BackColor = SurfaceBackground;
                     lbl.ForeColor = TextColor;
                     break;
 
                 case GroupBox grp:
-                    grp.BackColor = dark ? SurfaceBackground : Color.Transparent;
+                    grp.BackColor = SurfaceBackground;
                     grp.ForeColor = TextColor;
                     //With visual styles on, a GroupBox paints its caption with a fixed
                     //(dark) theme colour and ignores ForeColor. FlatStyle.Flat makes it
