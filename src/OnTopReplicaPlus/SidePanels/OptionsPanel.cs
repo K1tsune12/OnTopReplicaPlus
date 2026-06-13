@@ -12,7 +12,9 @@ namespace OnTopReplica.SidePanels {
 
         GroupBox _groupTheme;
         ComboBox _comboTheme;
+        Label _lblDescription;
         bool _themeLoading;
+        bool _positioning;
 
         public OptionsPanel() {
             InitializeComponent();
@@ -24,33 +26,28 @@ namespace OnTopReplica.SidePanels {
         }
 
         private void BuildDescriptionLabel() {
-            //The Designer description label (inside the flat-styled group box) refuses to
-            //render reliably in dark mode, so recreate it directly on the panel instead.
+            //The Designer description label refuses to render reliably inside the flat-styled
+            //group box in dark mode, so recreate it as a plain label on the panel. Its bounds
+            //are set proportionally in OnLayout so it scales correctly at any DPI.
             label1.Visible = false;
 
-            var desc = new Label {
+            _lblDescription = new Label {
                 Text = Strings.SettingsHotKeyDescription,
-                Location = new Point(10, 326),
-                Size = new Size(345, 56),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
             };
-            panelMain.Controls.Add(desc);
-            desc.BringToFront();
+            panelMain.Controls.Add(_lblDescription);
+            _lblDescription.BringToFront();
         }
 
         private void BuildThemeControls() {
             _groupTheme = new GroupBox {
                 Text = Strings.SettingsThemeTitle,
-                Location = new Point(3, 392),
-                Size = new Size(359, 56),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
                 TabStop = false
             };
 
             _comboTheme = new ComboBox {
                 DropDownStyle = ComboBoxStyle.DropDownList,
-                Location = new Point(10, 22),
-                Size = new Size(341, 24),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
             };
             _comboTheme.Items.AddRange(new object[] {
@@ -62,6 +59,51 @@ namespace OnTopReplica.SidePanels {
 
             _groupTheme.Controls.Add(_comboTheme);
             panelMain.Controls.Add(_groupTheme);
+        }
+
+        /// <summary>
+        /// Positions the code-created controls (the description label and the theme group)
+        /// proportionally, relative to the Designer hotkeys group. Because the Designer
+        /// controls are auto-scaled by font/DPI, deriving the scale from them keeps these
+        /// controls aligned on high-DPI displays instead of using fixed pixel coordinates.
+        /// </summary>
+        protected override void OnLayout(LayoutEventArgs levent) {
+            base.OnLayout(levent);
+
+            if (_positioning || _lblDescription == null || _groupTheme == null)
+                return;
+
+            _positioning = true;
+            try {
+                //359 is the hotkeys group's design width; its runtime width gives the scale.
+                float scale = groupHotkeys.Width / 359f;
+                int gap = Scale(8, scale);
+
+                _lblDescription.SetBounds(
+                    groupHotkeys.Left + Scale(4, scale),
+                    groupHotkeys.Bottom + gap,
+                    groupHotkeys.Width - Scale(8, scale),
+                    Scale(52, scale));
+
+                _groupTheme.SetBounds(
+                    groupHotkeys.Left,
+                    _lblDescription.Bottom + gap,
+                    groupHotkeys.Width,
+                    Scale(56, scale));
+
+                _comboTheme.SetBounds(
+                    Scale(10, scale),
+                    Scale(22, scale),
+                    _groupTheme.Width - Scale(20, scale),
+                    Scale(24, scale));
+            }
+            finally {
+                _positioning = false;
+            }
+        }
+
+        static int Scale(int value, float scale) {
+            return (int)Math.Round(value * scale);
         }
 
         private void ThemeBox_IndexChange(object sender, EventArgs e) {
@@ -113,7 +155,6 @@ namespace OnTopReplica.SidePanels {
             lblHotKeyCycleRegion.BringToFront();
             lblHotKeyClickThrough.BringToFront();
             lblHotKeyClickForwarding.BringToFront();
-            label1.BringToFront();
 
             //Load the current theme preference into the combo without firing the change handler.
             _themeLoading = true;
