@@ -48,7 +48,7 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(220, 461);
+            this.btnClose.Location = new System.Drawing.Point(220, 501);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(87, 27);
             this.btnClose.TabIndex = 0;
@@ -66,7 +66,7 @@
             this.panelMain.Controls.Add(this.groupLanguage);
             this.panelMain.Location = new System.Drawing.Point(7, 7);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(354, 440);
+            this.panelMain.Size = new System.Drawing.Size(366, 480);
             this.panelMain.TabIndex = 1;
             // 
             // groupHotkeys
@@ -86,7 +86,7 @@
             this.groupHotkeys.Controls.Add(this.txtHotKeyClone);
             this.groupHotkeys.Location = new System.Drawing.Point(3, 89);
             this.groupHotkeys.Name = "groupHotkeys";
-            this.groupHotkeys.Size = new System.Drawing.Size(347, 270);
+            this.groupHotkeys.Size = new System.Drawing.Size(359, 300);
             this.groupHotkeys.TabIndex = 1;
             this.groupHotkeys.TabStop = false;
             this.groupHotkeys.Text = "Hot keys:";
@@ -95,9 +95,9 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Location = new System.Drawing.Point(7, 222);
+            this.label1.Location = new System.Drawing.Point(7, 224);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(335, 38);
+            this.label1.Size = new System.Drawing.Size(351, 60);
             this.label1.TabIndex = 6;
             this.label1.Text = "These system-wide shortcuts can also be used when OnTopReplica is not in focus.";
             //
@@ -209,7 +209,7 @@
             this.groupLanguage.Controls.Add(this.lblLanguage);
             this.groupLanguage.Location = new System.Drawing.Point(3, 3);
             this.groupLanguage.Name = "groupLanguage";
-            this.groupLanguage.Size = new System.Drawing.Size(347, 78);
+            this.groupLanguage.Size = new System.Drawing.Size(359, 78);
             this.groupLanguage.TabIndex = 0;
             this.groupLanguage.TabStop = false;
             this.groupLanguage.Text = "Language:";
@@ -224,7 +224,7 @@
             this.comboLanguage.IconList = null;
             this.comboLanguage.Location = new System.Drawing.Point(10, 22);
             this.comboLanguage.Name = "comboLanguage";
-            this.comboLanguage.Size = new System.Drawing.Size(329, 24);
+            this.comboLanguage.Size = new System.Drawing.Size(341, 24);
             this.comboLanguage.TabIndex = 2;
             this.comboLanguage.SelectedIndexChanged += new System.EventHandler(this.LanguageBox_IndexChange);
             // 
@@ -234,7 +234,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLanguage.Location = new System.Drawing.Point(7, 50);
             this.lblLanguage.Name = "lblLanguage";
-            this.lblLanguage.Size = new System.Drawing.Size(333, 25);
+            this.lblLanguage.Size = new System.Drawing.Size(345, 25);
             this.lblLanguage.TabIndex = 1;
             this.lblLanguage.Text = "Requires a restart.";
             // 
@@ -245,10 +245,10 @@
             this.AutoScroll = true;
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.btnClose);
-            this.MinimumSize = new System.Drawing.Size(368, 500);
+            this.MinimumSize = new System.Drawing.Size(380, 540);
             this.Name = "OptionsPanel";
             this.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.Size = new System.Drawing.Size(368, 500);
+            this.Size = new System.Drawing.Size(380, 540);
             this.panelMain.ResumeLayout(false);
             this.groupHotkeys.ResumeLayout(false);
             this.groupHotkeys.PerformLayout();

@@ -25,8 +25,8 @@ namespace OnTopReplica.SidePanels {
         private void BuildThemeControls() {
             _groupTheme = new GroupBox {
                 Text = Strings.SettingsThemeTitle,
-                Location = new Point(3, 370),
-                Size = new Size(347, 56),
+                Location = new Point(3, 400),
+                Size = new Size(359, 56),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
                 TabStop = false
             };
@@ -34,7 +34,7 @@ namespace OnTopReplica.SidePanels {
             _comboTheme = new ComboBox {
                 DropDownStyle = ComboBoxStyle.DropDownList,
                 Location = new Point(10, 22),
-                Size = new Size(329, 24),
+                Size = new Size(341, 24),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
             };
             _comboTheme.Items.AddRange(new object[] {
