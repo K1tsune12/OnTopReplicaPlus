@@ -97,6 +97,7 @@ namespace OnTopReplica.SidePanels {
             lblHotKeyCycleRegion.BringToFront();
             lblHotKeyClickThrough.BringToFront();
             lblHotKeyClickForwarding.BringToFront();
+            label1.BringToFront();
 
             //Load the current theme preference into the combo without firing the change handler.
             _themeLoading = true;
