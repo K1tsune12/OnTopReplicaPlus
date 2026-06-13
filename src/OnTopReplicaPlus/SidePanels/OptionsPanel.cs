@@ -19,13 +19,29 @@ namespace OnTopReplica.SidePanels {
 
             LocalizePanel();
 
+            BuildDescriptionLabel();
             BuildThemeControls();
+        }
+
+        private void BuildDescriptionLabel() {
+            //The Designer description label (inside the flat-styled group box) refuses to
+            //render reliably in dark mode, so recreate it directly on the panel instead.
+            label1.Visible = false;
+
+            var desc = new Label {
+                Text = Strings.SettingsHotKeyDescription,
+                Location = new Point(10, 326),
+                Size = new Size(345, 56),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
+            };
+            panelMain.Controls.Add(desc);
+            desc.BringToFront();
         }
 
         private void BuildThemeControls() {
             _groupTheme = new GroupBox {
                 Text = Strings.SettingsThemeTitle,
-                Location = new Point(3, 400),
+                Location = new Point(3, 392),
                 Size = new Size(359, 56),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
                 TabStop = false

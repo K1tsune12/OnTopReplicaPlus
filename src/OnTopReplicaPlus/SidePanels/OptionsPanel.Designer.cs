@@ -48,7 +48,7 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(220, 501);
+            this.btnClose.Location = new System.Drawing.Point(220, 476);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(87, 27);
             this.btnClose.TabIndex = 0;
@@ -66,7 +66,7 @@
             this.panelMain.Controls.Add(this.groupLanguage);
             this.panelMain.Location = new System.Drawing.Point(7, 7);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(366, 480);
+            this.panelMain.Size = new System.Drawing.Size(366, 455);
             this.panelMain.TabIndex = 1;
             // 
             // groupHotkeys
@@ -86,7 +86,7 @@
             this.groupHotkeys.Controls.Add(this.txtHotKeyClone);
             this.groupHotkeys.Location = new System.Drawing.Point(3, 89);
             this.groupHotkeys.Name = "groupHotkeys";
-            this.groupHotkeys.Size = new System.Drawing.Size(359, 300);
+            this.groupHotkeys.Size = new System.Drawing.Size(359, 230);
             this.groupHotkeys.TabIndex = 1;
             this.groupHotkeys.TabStop = false;
             this.groupHotkeys.Text = "Hot keys:";
@@ -245,10 +245,10 @@
             this.AutoScroll = true;
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.btnClose);
-            this.MinimumSize = new System.Drawing.Size(380, 540);
+            this.MinimumSize = new System.Drawing.Size(380, 515);
             this.Name = "OptionsPanel";
             this.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.Size = new System.Drawing.Size(380, 540);
+            this.Size = new System.Drawing.Size(380, 515);
             this.panelMain.ResumeLayout(false);
             this.groupHotkeys.ResumeLayout(false);
             this.groupHotkeys.PerformLayout();
