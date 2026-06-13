@@ -145,6 +145,16 @@ namespace OnTopReplica.Properties {
             set { _data.HotKeyCycleSavedRegion = value; }
         }
 
+        public string HotKeyClickThrough {
+            get { return _data.HotKeyClickThrough; }
+            set { _data.HotKeyClickThrough = value; }
+        }
+
+        public string HotKeyClickForwarding {
+            get { return _data.HotKeyClickForwarding; }
+            set { _data.HotKeyClickForwarding = value; }
+        }
+
         public string FullscreenMode {
             get { return _data.FullscreenMode; }
             set { _data.FullscreenMode = value; }
@@ -389,6 +399,8 @@ namespace OnTopReplica.Properties {
             HotKeyCloneCurrent = "[CTRL]+[SHIFT]+C";
             HotKeyShowHide = "[CTRL]+[SHIFT]+O";
             HotKeyCycleSavedRegion = "[CTRL]+[SHIFT]+R";
+            HotKeyClickThrough = "[CTRL]+[SHIFT]+T";
+            HotKeyClickForwarding = "[CTRL]+[SHIFT]+F";
             FullscreenMode = "Standard";
             RestoreLastShowChrome = true;
             RestoreLastRegionSet = false;
@@ -421,6 +433,8 @@ namespace OnTopReplica.Properties {
         [DataMember] public string HotKeyCloneCurrent;
         [DataMember] public string HotKeyShowHide;
         [DataMember] public string HotKeyCycleSavedRegion;
+        [DataMember] public string HotKeyClickThrough;
+        [DataMember] public string HotKeyClickForwarding;
         [DataMember] public string FullscreenMode;
         [DataMember] public bool RestoreLastShowChrome;
         [DataMember] public bool RestoreLastRegionSet;

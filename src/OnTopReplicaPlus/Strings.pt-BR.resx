@@ -411,16 +411,16 @@ Você pode ativar 'click-trough' mais tarde</value>
     <value>Alterna a exibição da borda da janela.</value>    
   </data>
   <data name="MenuClickForwarding" xml:space="preserve">
-    <value>Habilita 'Click forwarding'</value>
+    <value>Redirecionar cliques</value>
   </data>
   <data name="MenuClickForwardingTT" xml:space="preserve">
-    <value>Habilita 'click forwarding' na janela clonada.</value>
+    <value>Redireciona seus cliques na réplica para a janela original clonada.</value>
   </data>
   <data name="MenuClickThrough" xml:space="preserve">
-    <value>Habilita 'Click-Through'</value>
+    <value>Ignorar cliques</value>
   </data>
   <data name="MenuClickThroughTT" xml:space="preserve">
-    <value>OnTopReplica irá se comportar como uma janela transparente que permite clicar através dela.</value>
+    <value>A réplica passa a ignorar os cliques: eles atravessam para as janelas atrás dela (vira uma sobreposição transparente).</value>
     
   </data>
   <data name="MenuClose" xml:space="preserve">
@@ -701,6 +701,12 @@ OnTopReplica será fechado e atualizado.</value>
   </data>
   <data name="SettingsHotKeyCycleRegion" xml:space="preserve">
     <value>Alternar regiões</value>
+  </data>
+  <data name="SettingsHotKeyClickThrough" xml:space="preserve">
+    <value>Ignorar cliques</value>
+  </data>
+  <data name="SettingsHotKeyClickForwarding" xml:space="preserve">
+    <value>Redirecionar cliques</value>
   </data>
   <data name="SettingsThemeTitle" xml:space="preserve">
     <value>Tema:</value>

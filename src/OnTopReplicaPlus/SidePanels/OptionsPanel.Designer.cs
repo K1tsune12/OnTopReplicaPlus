@@ -29,6 +29,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblHotKeyCycleRegion = new System.Windows.Forms.Label();
             this.txtHotKeyCycleRegion = new OnTopReplica.HotKeyTextBox();
+            this.lblHotKeyClickThrough = new System.Windows.Forms.Label();
+            this.txtHotKeyClickThrough = new OnTopReplica.HotKeyTextBox();
+            this.lblHotKeyClickForwarding = new System.Windows.Forms.Label();
+            this.txtHotKeyClickForwarding = new OnTopReplica.HotKeyTextBox();
             this.lblHotKeyShowHide = new System.Windows.Forms.Label();
             this.txtHotKeyShowHide = new OnTopReplica.HotKeyTextBox();
             this.lblHotKeyClone = new System.Windows.Forms.Label();
@@ -72,13 +76,17 @@
             this.groupHotkeys.Controls.Add(this.label1);
             this.groupHotkeys.Controls.Add(this.lblHotKeyCycleRegion);
             this.groupHotkeys.Controls.Add(this.txtHotKeyCycleRegion);
+            this.groupHotkeys.Controls.Add(this.lblHotKeyClickThrough);
+            this.groupHotkeys.Controls.Add(this.txtHotKeyClickThrough);
+            this.groupHotkeys.Controls.Add(this.lblHotKeyClickForwarding);
+            this.groupHotkeys.Controls.Add(this.txtHotKeyClickForwarding);
             this.groupHotkeys.Controls.Add(this.lblHotKeyShowHide);
             this.groupHotkeys.Controls.Add(this.txtHotKeyShowHide);
             this.groupHotkeys.Controls.Add(this.lblHotKeyClone);
             this.groupHotkeys.Controls.Add(this.txtHotKeyClone);
             this.groupHotkeys.Location = new System.Drawing.Point(3, 89);
             this.groupHotkeys.Name = "groupHotkeys";
-            this.groupHotkeys.Size = new System.Drawing.Size(294, 160);
+            this.groupHotkeys.Size = new System.Drawing.Size(294, 230);
             this.groupHotkeys.TabIndex = 1;
             this.groupHotkeys.TabStop = false;
             this.groupHotkeys.Text = "Hot keys:";
@@ -87,7 +95,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Location = new System.Drawing.Point(7, 108);
+            this.label1.Location = new System.Drawing.Point(7, 180);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(280, 42);
             this.label1.TabIndex = 6;
@@ -112,6 +120,46 @@
             this.txtHotKeyCycleRegion.ReadOnly = true;
             this.txtHotKeyCycleRegion.Size = new System.Drawing.Size(181, 23);
             this.txtHotKeyCycleRegion.TabIndex = 4;
+            //
+            // lblHotKeyClickThrough
+            //
+            this.lblHotKeyClickThrough.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHotKeyClickThrough.BackColor = System.Drawing.Color.Transparent;
+            this.lblHotKeyClickThrough.Location = new System.Drawing.Point(196, 115);
+            this.lblHotKeyClickThrough.Name = "lblHotKeyClickThrough";
+            this.lblHotKeyClickThrough.Size = new System.Drawing.Size(91, 23);
+            this.lblHotKeyClickThrough.TabIndex = 7;
+            this.lblHotKeyClickThrough.Text = "Click-through";
+            //
+            // txtHotKeyClickThrough
+            //
+            this.txtHotKeyClickThrough.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHotKeyClickThrough.Location = new System.Drawing.Point(7, 112);
+            this.txtHotKeyClickThrough.Name = "txtHotKeyClickThrough";
+            this.txtHotKeyClickThrough.ReadOnly = true;
+            this.txtHotKeyClickThrough.Size = new System.Drawing.Size(181, 23);
+            this.txtHotKeyClickThrough.TabIndex = 8;
+            //
+            // lblHotKeyClickForwarding
+            //
+            this.lblHotKeyClickForwarding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHotKeyClickForwarding.BackColor = System.Drawing.Color.Transparent;
+            this.lblHotKeyClickForwarding.Location = new System.Drawing.Point(196, 145);
+            this.lblHotKeyClickForwarding.Name = "lblHotKeyClickForwarding";
+            this.lblHotKeyClickForwarding.Size = new System.Drawing.Size(91, 23);
+            this.lblHotKeyClickForwarding.TabIndex = 9;
+            this.lblHotKeyClickForwarding.Text = "Click forwarding";
+            //
+            // txtHotKeyClickForwarding
+            //
+            this.txtHotKeyClickForwarding.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHotKeyClickForwarding.Location = new System.Drawing.Point(7, 142);
+            this.txtHotKeyClickForwarding.Name = "txtHotKeyClickForwarding";
+            this.txtHotKeyClickForwarding.ReadOnly = true;
+            this.txtHotKeyClickForwarding.Size = new System.Drawing.Size(181, 23);
+            this.txtHotKeyClickForwarding.TabIndex = 10;
             //
             // lblHotKeyShowHide
             //
@@ -197,10 +245,10 @@
             this.AutoScroll = true;
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.btnClose);
-            this.MinimumSize = new System.Drawing.Size(315, 375);
+            this.MinimumSize = new System.Drawing.Size(315, 500);
             this.Name = "OptionsPanel";
             this.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.Size = new System.Drawing.Size(315, 375);
+            this.Size = new System.Drawing.Size(315, 500);
             this.panelMain.ResumeLayout(false);
             this.groupHotkeys.ResumeLayout(false);
             this.groupHotkeys.PerformLayout();
@@ -223,6 +271,10 @@
         private System.Windows.Forms.Label lblHotKeyClone;
         private System.Windows.Forms.Label lblHotKeyCycleRegion;
         private HotKeyTextBox txtHotKeyCycleRegion;
+        private System.Windows.Forms.Label lblHotKeyClickThrough;
+        private HotKeyTextBox txtHotKeyClickThrough;
+        private System.Windows.Forms.Label lblHotKeyClickForwarding;
+        private HotKeyTextBox txtHotKeyClickForwarding;
         private System.Windows.Forms.Label label1;
     }
 }

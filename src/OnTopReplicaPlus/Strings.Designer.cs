@@ -1481,7 +1481,25 @@ namespace OnTopReplica {
                 return ResourceManager.GetString("SettingsHotKeyCycleRegion", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Click-through.
+        /// </summary>
+        internal static string SettingsHotKeyClickThrough {
+            get {
+                return ResourceManager.GetString("SettingsHotKeyClickThrough", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Click forwarding.
+        /// </summary>
+        internal static string SettingsHotKeyClickForwarding {
+            get {
+                return ResourceManager.GetString("SettingsHotKeyClickForwarding", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to These system-wide shortcuts can also be used when OnTopReplica is not in focus..
         /// </summary>

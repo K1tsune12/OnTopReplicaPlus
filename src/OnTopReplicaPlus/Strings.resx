@@ -588,6 +588,12 @@ You can enable click-through later</value>
   <data name="SettingsHotKeyCycleRegion" xml:space="preserve">
     <value>Cycle regions</value>
   </data>
+  <data name="SettingsHotKeyClickThrough" xml:space="preserve">
+    <value>Click-through</value>
+  </data>
+  <data name="SettingsHotKeyClickForwarding" xml:space="preserve">
+    <value>Click forwarding</value>
+  </data>
   <data name="SettingsThemeTitle" xml:space="preserve">
     <value>Theme:</value>
   </data>

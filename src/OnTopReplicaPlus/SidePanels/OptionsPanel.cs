@@ -25,7 +25,7 @@ namespace OnTopReplica.SidePanels {
         private void BuildThemeControls() {
             _groupTheme = new GroupBox {
                 Text = Strings.SettingsThemeTitle,
-                Location = new Point(3, 255),
+                Location = new Point(3, 330),
                 Size = new Size(294, 56),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
                 TabStop = false
@@ -70,6 +70,8 @@ namespace OnTopReplica.SidePanels {
             lblHotKeyShowHide.Text = Strings.SettingsHotKeyShowHide;
             lblHotKeyClone.Text = Strings.SettingsHotKeyClone;
             lblHotKeyCycleRegion.Text = Strings.SettingsHotKeyCycleRegion;
+            lblHotKeyClickThrough.Text = Strings.SettingsHotKeyClickThrough;
+            lblHotKeyClickForwarding.Text = Strings.SettingsHotKeyClickForwarding;
             label1.Text = Strings.SettingsHotKeyDescription;
 
             btnClose.Text = Strings.MenuClose;
@@ -85,6 +87,8 @@ namespace OnTopReplica.SidePanels {
             txtHotKeyShowHide.Text = Settings.Default.HotKeyShowHide;
             txtHotKeyClone.Text = Settings.Default.HotKeyCloneCurrent;
             txtHotKeyCycleRegion.Text = Settings.Default.HotKeyCycleSavedRegion;
+            txtHotKeyClickThrough.Text = Settings.Default.HotKeyClickThrough;
+            txtHotKeyClickForwarding.Text = Settings.Default.HotKeyClickForwarding;
 
             //Load the current theme preference into the combo without firing the change handler.
             _themeLoading = true;
@@ -113,6 +117,8 @@ namespace OnTopReplica.SidePanels {
             Settings.Default.HotKeyShowHide = txtHotKeyShowHide.Text;
             Settings.Default.HotKeyCloneCurrent = txtHotKeyClone.Text;
             Settings.Default.HotKeyCycleSavedRegion = txtHotKeyCycleRegion.Text;
+            Settings.Default.HotKeyClickThrough = txtHotKeyClickThrough.Text;
+            Settings.Default.HotKeyClickForwarding = txtHotKeyClickForwarding.Text;
             var manager = form.MessagePumpManager.Get<OnTopReplica.MessagePumpProcessors.HotKeyManager>();
             manager.RefreshHotkeys();
             manager.Enabled = true;

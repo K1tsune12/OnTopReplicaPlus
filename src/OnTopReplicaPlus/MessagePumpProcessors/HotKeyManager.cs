@@ -99,6 +99,8 @@ namespace OnTopReplica.MessagePumpProcessors {
             RegisterHandler(Settings.Default.HotKeyCloneCurrent, HotKeyCloneHandler);
             RegisterHandler(Settings.Default.HotKeyShowHide, HotKeyShowHideHandler);
             RegisterHandler(Settings.Default.HotKeyCycleSavedRegion, HotKeyCycleSavedRegionHandler);
+            RegisterHandler(Settings.Default.HotKeyClickThrough, HotKeyClickThroughHandler);
+            RegisterHandler(Settings.Default.HotKeyClickForwarding, HotKeyClickForwardingHandler);
         }
 
         private void RegisterHandler(string spec, HotKeyHandler handler) {
@@ -166,6 +168,20 @@ namespace OnTopReplica.MessagePumpProcessors {
         /// </summary>
         void HotKeyCycleSavedRegionHandler() {
             Form.CycleSavedRegion();
+        }
+
+        /// <summary>
+        /// Toggles click-through ("ignore clicks") on/off.
+        /// </summary>
+        void HotKeyClickThroughHandler() {
+            Form.ClickThroughEnabled = !Form.ClickThroughEnabled;
+        }
+
+        /// <summary>
+        /// Toggles click-forwarding ("forward clicks") on/off.
+        /// </summary>
+        void HotKeyClickForwardingHandler() {
+            Form.ClickForwardingEnabled = !Form.ClickForwardingEnabled;
         }
 
         #endregion
