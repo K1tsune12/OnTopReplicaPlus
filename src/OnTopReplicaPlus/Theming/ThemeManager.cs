@@ -150,18 +150,17 @@ namespace OnTopReplica.Theming {
                     break;
 
                 case LinkLabel link:
-                    link.BackColor = SurfaceBackground;
+                    link.BackColor = Color.Transparent;
                     link.ForeColor = TextColor;
                     link.LinkColor = AccentColor;
                     link.ActiveLinkColor = AccentColor;
                     break;
 
                 case Label lbl:
-                    //Always use a solid background (matching the surface) rather than a
-                    //transparent one. Transparent labels inside a flat-styled GroupBox can
-                    //fail to paint their text in dark mode, and they keep stale pixels of the
-                    //previous theme when switching, showing dark patches over a light surface.
-                    lbl.BackColor = SurfaceBackground;
+                    //Transparent so the label blends perfectly with the surface behind it.
+                    //BringToFront (in the views) keeps the text painting in dark mode, and a
+                    //full Refresh on theme switch prevents stale pixels of the previous theme.
+                    lbl.BackColor = Color.Transparent;
                     lbl.ForeColor = TextColor;
                     break;
 
