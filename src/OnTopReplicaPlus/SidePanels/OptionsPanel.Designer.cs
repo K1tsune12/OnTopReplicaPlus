@@ -48,7 +48,7 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(220, 431);
+            this.btnClose.Location = new System.Drawing.Point(220, 461);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(87, 27);
             this.btnClose.TabIndex = 0;
@@ -66,7 +66,7 @@
             this.panelMain.Controls.Add(this.groupLanguage);
             this.panelMain.Location = new System.Drawing.Point(7, 7);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(301, 418);
+            this.panelMain.Size = new System.Drawing.Size(354, 440);
             this.panelMain.TabIndex = 1;
             // 
             // groupHotkeys
@@ -86,7 +86,7 @@
             this.groupHotkeys.Controls.Add(this.txtHotKeyClone);
             this.groupHotkeys.Location = new System.Drawing.Point(3, 89);
             this.groupHotkeys.Name = "groupHotkeys";
-            this.groupHotkeys.Size = new System.Drawing.Size(294, 240);
+            this.groupHotkeys.Size = new System.Drawing.Size(347, 270);
             this.groupHotkeys.TabIndex = 1;
             this.groupHotkeys.TabStop = false;
             this.groupHotkeys.Text = "Hot keys:";
@@ -95,9 +95,9 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Location = new System.Drawing.Point(7, 194);
+            this.label1.Location = new System.Drawing.Point(7, 222);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 38);
+            this.label1.Size = new System.Drawing.Size(335, 38);
             this.label1.TabIndex = 6;
             this.label1.Text = "These system-wide shortcuts can also be used when OnTopReplica is not in focus.";
             //
@@ -105,9 +105,9 @@
             //
             this.lblHotKeyCycleRegion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.lblHotKeyCycleRegion.BackColor = System.Drawing.Color.Transparent;
-            this.lblHotKeyCycleRegion.Location = new System.Drawing.Point(192, 92);
+            this.lblHotKeyCycleRegion.Location = new System.Drawing.Point(192, 104);
             this.lblHotKeyCycleRegion.Name = "lblHotKeyCycleRegion";
-            this.lblHotKeyCycleRegion.Size = new System.Drawing.Size(96, 30);
+            this.lblHotKeyCycleRegion.Size = new System.Drawing.Size(148, 30);
             this.lblHotKeyCycleRegion.TabIndex = 5;
             this.lblHotKeyCycleRegion.Text = "Cycle regions";
             //
@@ -115,7 +115,7 @@
             //
             this.txtHotKeyCycleRegion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHotKeyCycleRegion.Location = new System.Drawing.Point(7, 90);
+            this.txtHotKeyCycleRegion.Location = new System.Drawing.Point(7, 102);
             this.txtHotKeyCycleRegion.Name = "txtHotKeyCycleRegion";
             this.txtHotKeyCycleRegion.ReadOnly = true;
             this.txtHotKeyCycleRegion.Size = new System.Drawing.Size(181, 23);
@@ -125,9 +125,9 @@
             //
             this.lblHotKeyClickThrough.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.lblHotKeyClickThrough.BackColor = System.Drawing.Color.Transparent;
-            this.lblHotKeyClickThrough.Location = new System.Drawing.Point(192, 126);
+            this.lblHotKeyClickThrough.Location = new System.Drawing.Point(192, 144);
             this.lblHotKeyClickThrough.Name = "lblHotKeyClickThrough";
-            this.lblHotKeyClickThrough.Size = new System.Drawing.Size(96, 30);
+            this.lblHotKeyClickThrough.Size = new System.Drawing.Size(148, 30);
             this.lblHotKeyClickThrough.TabIndex = 7;
             this.lblHotKeyClickThrough.Text = "Click-through";
             //
@@ -135,7 +135,7 @@
             //
             this.txtHotKeyClickThrough.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHotKeyClickThrough.Location = new System.Drawing.Point(7, 124);
+            this.txtHotKeyClickThrough.Location = new System.Drawing.Point(7, 142);
             this.txtHotKeyClickThrough.Name = "txtHotKeyClickThrough";
             this.txtHotKeyClickThrough.ReadOnly = true;
             this.txtHotKeyClickThrough.Size = new System.Drawing.Size(181, 23);
@@ -145,9 +145,9 @@
             //
             this.lblHotKeyClickForwarding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.lblHotKeyClickForwarding.BackColor = System.Drawing.Color.Transparent;
-            this.lblHotKeyClickForwarding.Location = new System.Drawing.Point(192, 160);
+            this.lblHotKeyClickForwarding.Location = new System.Drawing.Point(192, 184);
             this.lblHotKeyClickForwarding.Name = "lblHotKeyClickForwarding";
-            this.lblHotKeyClickForwarding.Size = new System.Drawing.Size(96, 30);
+            this.lblHotKeyClickForwarding.Size = new System.Drawing.Size(148, 30);
             this.lblHotKeyClickForwarding.TabIndex = 9;
             this.lblHotKeyClickForwarding.Text = "Click forwarding";
             //
@@ -155,7 +155,7 @@
             //
             this.txtHotKeyClickForwarding.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHotKeyClickForwarding.Location = new System.Drawing.Point(7, 158);
+            this.txtHotKeyClickForwarding.Location = new System.Drawing.Point(7, 182);
             this.txtHotKeyClickForwarding.Name = "txtHotKeyClickForwarding";
             this.txtHotKeyClickForwarding.ReadOnly = true;
             this.txtHotKeyClickForwarding.Size = new System.Drawing.Size(181, 23);
@@ -167,7 +167,7 @@
             this.lblHotKeyShowHide.BackColor = System.Drawing.Color.Transparent;
             this.lblHotKeyShowHide.Location = new System.Drawing.Point(192, 24);
             this.lblHotKeyShowHide.Name = "lblHotKeyShowHide";
-            this.lblHotKeyShowHide.Size = new System.Drawing.Size(96, 30);
+            this.lblHotKeyShowHide.Size = new System.Drawing.Size(148, 30);
             this.lblHotKeyShowHide.TabIndex = 3;
             this.lblHotKeyShowHide.Text = "Show/Hide";
             // 
@@ -185,9 +185,9 @@
             // 
             this.lblHotKeyClone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.lblHotKeyClone.BackColor = System.Drawing.Color.Transparent;
-            this.lblHotKeyClone.Location = new System.Drawing.Point(192, 58);
+            this.lblHotKeyClone.Location = new System.Drawing.Point(192, 64);
             this.lblHotKeyClone.Name = "lblHotKeyClone";
-            this.lblHotKeyClone.Size = new System.Drawing.Size(96, 30);
+            this.lblHotKeyClone.Size = new System.Drawing.Size(148, 30);
             this.lblHotKeyClone.TabIndex = 1;
             this.lblHotKeyClone.Text = "Clone current window";
             // 
@@ -195,7 +195,7 @@
             // 
             this.txtHotKeyClone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHotKeyClone.Location = new System.Drawing.Point(7, 56);
+            this.txtHotKeyClone.Location = new System.Drawing.Point(7, 62);
             this.txtHotKeyClone.Name = "txtHotKeyClone";
             this.txtHotKeyClone.ReadOnly = true;
             this.txtHotKeyClone.Size = new System.Drawing.Size(181, 23);
@@ -209,7 +209,7 @@
             this.groupLanguage.Controls.Add(this.lblLanguage);
             this.groupLanguage.Location = new System.Drawing.Point(3, 3);
             this.groupLanguage.Name = "groupLanguage";
-            this.groupLanguage.Size = new System.Drawing.Size(294, 78);
+            this.groupLanguage.Size = new System.Drawing.Size(347, 78);
             this.groupLanguage.TabIndex = 0;
             this.groupLanguage.TabStop = false;
             this.groupLanguage.Text = "Language:";
@@ -224,7 +224,7 @@
             this.comboLanguage.IconList = null;
             this.comboLanguage.Location = new System.Drawing.Point(10, 22);
             this.comboLanguage.Name = "comboLanguage";
-            this.comboLanguage.Size = new System.Drawing.Size(276, 24);
+            this.comboLanguage.Size = new System.Drawing.Size(329, 24);
             this.comboLanguage.TabIndex = 2;
             this.comboLanguage.SelectedIndexChanged += new System.EventHandler(this.LanguageBox_IndexChange);
             // 
@@ -234,7 +234,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLanguage.Location = new System.Drawing.Point(7, 50);
             this.lblLanguage.Name = "lblLanguage";
-            this.lblLanguage.Size = new System.Drawing.Size(280, 25);
+            this.lblLanguage.Size = new System.Drawing.Size(333, 25);
             this.lblLanguage.TabIndex = 1;
             this.lblLanguage.Text = "Requires a restart.";
             // 
@@ -245,10 +245,10 @@
             this.AutoScroll = true;
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.btnClose);
-            this.MinimumSize = new System.Drawing.Size(315, 470);
+            this.MinimumSize = new System.Drawing.Size(368, 500);
             this.Name = "OptionsPanel";
             this.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.Size = new System.Drawing.Size(315, 470);
+            this.Size = new System.Drawing.Size(368, 500);
             this.panelMain.ResumeLayout(false);
             this.groupHotkeys.ResumeLayout(false);
             this.groupHotkeys.PerformLayout();
