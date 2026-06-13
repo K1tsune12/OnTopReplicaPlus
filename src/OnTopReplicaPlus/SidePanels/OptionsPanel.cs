@@ -25,7 +25,7 @@ namespace OnTopReplica.SidePanels {
         private void BuildThemeControls() {
             _groupTheme = new GroupBox {
                 Text = Strings.SettingsThemeTitle,
-                Location = new Point(3, 330),
+                Location = new Point(3, 340),
                 Size = new Size(294, 56),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
                 TabStop = false
